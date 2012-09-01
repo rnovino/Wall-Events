@@ -87,7 +87,7 @@ $page_feed = $facebook->api(
 	<div class="topbar">
 		<div class="fill">
 		<div class="container">
-			<a class="brand" href="/">Vector X Vexel CNC App - Beta</a>
+			<a class="brand" href="/">Vector X Vexel CNC App - Beta test</a>
 			<ul class="nav secondary-nav">
 				<li class="dropdown" data-dropdown="dropdown">
 					<a class="dropdown-toggle" href="#">Switch Page</a>
