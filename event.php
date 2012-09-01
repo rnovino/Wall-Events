@@ -19,7 +19,7 @@ $facebook = new Facebook(array(
 ));
 
   // Initialize a Facebook instance from the PHP SDK
-  $user = $facebook->require_login();
+  //$user = $facebook->require_login();
 
 
   // Declare the variables we'll use to demonstrate
