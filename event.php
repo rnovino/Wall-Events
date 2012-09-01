@@ -37,11 +37,11 @@ if ($user) {
   $loginUrl = $facebook->getLoginUrl();
 }
 
-?>
 
+?>
 <h1>Yummie Tester</h1>
-Hello <fb:name uid='<?php echo $user; ?>' useyou='false' possessive='true' />! <br>
-Your id : <?php echo $user; ?>.<br>
+<?php Hello <fb:name uid='<?php echo $user; ?>' useyou='false' possessive='true' />! <br>
+Your id : <?php echo $user; ?>.<br> ?>
 
 <h2>Event<h2>
 
