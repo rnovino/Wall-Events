@@ -32,7 +32,7 @@ $page_feed = $facebook->api(
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nettuts+ Page Manager</title>
+	<title>Vector X Vexel CNC App</title>
 	<link rel="stylesheet" href="css/reset.css" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 	<script src="js/jquery.min.js"></script>
@@ -87,7 +87,7 @@ $page_feed = $facebook->api(
 	<div class="topbar">
 		<div class="fill">
 		<div class="container">
-			<a class="brand" href="/">Nettuts+ Page Manager</a>
+			<a class="brand" href="/">Vector X Vexel CNC App</a>
 			<ul class="nav secondary-nav">
 				<li class="dropdown" data-dropdown="dropdown">
 					<a class="dropdown-toggle" href="#">Switch Page</a>
