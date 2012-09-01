@@ -40,8 +40,8 @@ if ($user) {
 
 ?>
 <h1>Yummie Tester</h1>
-<?php Hello <fb:name uid='<?php echo $user; ?>' useyou='false' possessive='true' />! <br>
-Your id : <?php echo $user; ?>.<br> ?>
+Hello <fb:name uid='<?php echo $user; ?>' useyou='false' possessive='true' />! <br>
+Your id : <?php echo $user; ?>.<br>
 
 <h2>Event<h2>
 
