@@ -33,9 +33,9 @@ $facebook = new Facebook(array(
   $event_privacy = "SECRET"; // We'll make it secret so we don't annoy folks.
 
   // We'll use three users to demostrate the new APIs
-  //$user_id1 = "10151151342170071";
+  $user_id1 = "522839937731967";
   $user_id2 = "4406914259592";
-  //$user_id3 = "10150942641946199";
+  $user_id3 = "110307735671971";
 
   // Convenience method to print simple pre-formatted text.
   function printMsg($msg) {
@@ -55,13 +55,13 @@ $facebook = new Facebook(array(
 
         // Get the user profiles so we can print friendly messages
         $me = $facebook->api('/me', 'GET');
-       // $user_1 = $facebook->api($user_id1, 'GET');
+        $user_1 = $facebook->api($user_id1, 'GET');
         $user_2 = $facebook->api($user_id2, 'GET');
-       // $user_3 = $facebook->api($user_id3, 'GET');
+        $user_3 = $facebook->api($user_id3, 'GET');
 
-       // printMsg('User 1: ' . $user_1['name']);
+        printMsg('User 1: ' . $user_1['name']);
         printMsg('User 2: ' . $user_2['name']);
-      //  printMsg('User 3: ' . $user_3['name']);
+        printMsg('User 3: ' . $user_3['name']);
 
         // Create an event
         $ret_obj = $facebook->api('/me/events', 'POST', array(
@@ -80,45 +80,45 @@ $facebook = new Facebook(array(
         
 
         // Invite user 1 to the event
-        //printMsg('Inviting ' . $user_1['name']);
-        //$ret_val = $facebook->api($event_id . "/invited/" . $user_id1,
-        //             'POST');
-//
-//        //if($ret_val) {
-//        //  // Success
-//        //  printMsg($user_1['name'] . ' successfully invited.');
-//        //} else {
-//        //  printMsg("Couldn't invite " . $user_1['name']);
-//        //}
-//        //
-//        //// Check if user 1 is invited to the event
-//        //$ret_val = $facebook->api($event_id . '/invited/' . $user_id1, 'GET');
-//        //
-//        //if($ret_val) {
-//        //  printMsg($user_1['name'] . ' is invited (checked).');
-//        //} else {
-//        //  printMsg($user_1['name'] . ' is not invited');
-//        //}
-//        //
-//        //// User 1 should be no reply, so we check now.
-//        //// Check in the same way for /attending, /maybe, /declined
-//        //$ret_val = $facebook->api($event_id . '/noreply/' . $user_id1, 'GET');
-//        //
-//        //if($ret_val) {
-//        //  printMsg($user_1['name'] . ' has not replied.');
-//        //} else {
-//        //  printMsg('Error: ' . $user_1['name'] . ' has replied');
-//        //}
-//
-//        //// Check if user 2 is invited to the event (shouldn't be, yet)
-//        //$ret_obj = $facebook->api($event_id . '/invited/' . $user_id2, 'GET');
-//        //  
-//        //// If the user is not invited, we'll get an empty data[] array 
-//        //if(count($ret_obj['data']) > 0) {
-//        //  printMsg('Error: ' . $user_2['name'] . ' invited.');
-//        //} else {
-//        //  printMsg($user_2['name'] . ' is not invited');
-        //}   
+        printMsg('Inviting ' . $user_1['name']);
+        $ret_val = $facebook->api($event_id . "/invited/" . $user_id1,
+                     'POST');
+
+        if($ret_val) {
+          // Success
+          printMsg($user_1['name'] . ' successfully invited.');
+        } else {
+          printMsg("Couldn't invite " . $user_1['name']);
+        }
+        
+        // Check if user 1 is invited to the event
+        $ret_val = $facebook->api($event_id . '/invited/' . $user_id1, 'GET');
+        
+        if($ret_val) {
+          printMsg($user_1['name'] . ' is invited (checked).');
+        } else {
+          printMsg($user_1['name'] . ' is not invited');
+        }
+        
+        // User 1 should be no reply, so we check now.
+        // Check in the same way for /attending, /maybe, /declined
+        $ret_val = $facebook->api($event_id . '/noreply/' . $user_id1, 'GET');
+        
+        if($ret_val) {
+          printMsg($user_1['name'] . ' has not replied.');
+        } else {
+          printMsg('Error: ' . $user_1['name'] . ' has replied');
+        }
+
+        // Check if user 2 is invited to the event (shouldn't be, yet)
+        $ret_obj = $facebook->api($event_id . '/invited/' . $user_id2, 'GET');
+          
+        // If the user is not invited, we'll get an empty data[] array 
+        if(count($ret_obj['data']) > 0) {
+          printMsg('Error: ' . $user_2['name'] . ' invited.');
+        } else {
+          printMsg($user_2['name'] . ' is not invited');
+        }   
 
         // Invite users 2 & 3
         printMsg('Inviting ' . $user_2['name'] . ' and ' . $user_3['name']);
