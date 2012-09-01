@@ -19,7 +19,7 @@ $facebook = new Facebook(array(
 
   // We'll create an event in this example.
   // We'll need create_event permission for this.
-  $event_id = 0;
+  $event_id = 359893154086611;
   $event_name = "New Event API Test Event";
   $event_start = time();     // We'll just start the event now.
   $event_privacy = "SECRET"; // We'll make it secret so we don't annoy folks.
