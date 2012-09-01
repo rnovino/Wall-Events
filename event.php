@@ -4,12 +4,12 @@
 include_once 'facebook.php';
 require 'config.php';
 
-//start the session if necessary
-if( session_id() ) {
-
-} else {
-  session_start();
-}
+////start the session if necessary
+//if( session_id() ) {
+//
+//} else {
+//  session_start();
+//}
 
 //instantiate the Facebook library with the APP ID and APP SECRET
 $facebook = new Facebook(array(
@@ -18,12 +18,26 @@ $facebook = new Facebook(array(
   'cookie' => true
 ));
 
-  // Initialize a Facebook instance from the PHP SDK
-  //$user = $facebook->require_login();
+$user = $facebook->getUser();
 
+if ($user) {
+  try {
+    // Proceed knowing you have a logged in user who's authenticated.
+    $user_profile = $facebook->api('/me/events');
+  } catch (FacebookApiException $e) {
+    error_log($e);
+    $user = null;
+  }
+}
 
-  // Declare the variables we'll use to demonstrate
-  // the new event-management APIs
+// Login or logout url will be needed depending on current user state.
+if ($user) {
+  $logoutUrl = $facebook->getLogoutUrl();
+} else {
+  $loginUrl = $facebook->getLoginUrl();
+}
+?>
+
 ?>
 
 <h1>Yummie Tester</h1>
