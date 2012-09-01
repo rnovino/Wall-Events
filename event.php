@@ -12,8 +12,7 @@ $facebook = new Facebook(array(
 ));
 
   // Initialize a Facebook instance from the PHP SDK
-  $facebook = new Facebook($config);
-  $user_id = $facebook->getUser();
+    $user_id = $facebook->getUser();
 
   // Declare the variables we'll use to demonstrate
   // the new event-management APIs
