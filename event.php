@@ -25,9 +25,9 @@ $facebook = new Facebook(array(
   $event_privacy = "SECRET"; // We'll make it secret so we don't annoy folks.
 
   // We'll use three users to demostrate the new APIs
-  $user_id1 = "USER_ID1";
-  $user_id2 = "USER_ID2";
-  $user_id3 = "USER_ID3";
+  $user_id1 = "https://www.facebook.com/xian1990";
+  $user_id2 = "https://www.facebook.com/lOvelyvirus.mmpa";
+  $user_id3 = "https://www.facebook.com/biboy.novi";
 
   // Convenience method to print simple pre-formatted text.
   function printMsg($msg) {
