@@ -69,7 +69,7 @@ if($user) {
 	$_SESSION['active'] = $accounts['data'][0];
 	
 	//redirect to manage.php
-	header('Location: manage.php');
+	header('Location: event.php');
 } else {
 	//if not, let's redirect to the ALLOW page so we can get access
 	//Create a login URL using the Facebook library's getLoginUrl() method
