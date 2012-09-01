@@ -24,13 +24,15 @@ $facebook = new Facebook(array(
 
   // Declare the variables we'll use to demonstrate
   // the new event-management APIs
+?>
 
 <h1>Yummie Tester</h1>
 Hello <fb:name uid='<?php echo $user; ?>' useyou='false' possessive='true' />! <br>
 Your id : <?php echo $user; ?>.<br>
 
 <h2>Event<h2>
-<?
+
+<?php
 $events = $facebook->api_client->events_getMembers(486464158048547);
 
 echo "<h3>Attending</h3>";
@@ -88,4 +90,6 @@ if($events['not_replied'][0]){
   echo "None";  
 }
 
-echo "</ol>";
+echo "</ol>"; 
+
+?>
