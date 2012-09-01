@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nettuts+ Page Manager</title>
+	<title>Vector X Vexel CNC App</title>
 	<link rel="stylesheet" href="css/reset.css" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 	
